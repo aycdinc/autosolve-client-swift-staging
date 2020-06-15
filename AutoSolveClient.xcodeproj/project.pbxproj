@@ -1,0 +1,954 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8C7AB3E2247B40CD00FC9073 /* AutoSolveDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7AB3E1247B40CD00FC9073 /* AutoSolveDelegate.swift */; };
+		8C95295B247AAE9300237BDF /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8C95295A247AAE9300237BDF /* LICENSE.txt */; };
+		8C952980247ABFE400237BDF /* AutoSolveRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A04372477FAD00067AEA4 /* AutoSolveRequest.swift */; };
+		8C952981247ABFE400237BDF /* AutoSolveResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A04382477FAD00067AEA4 /* AutoSolveResponse.swift */; };
+		8C952982247ABFE400237BDF /* AutoSolveTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A04352477FAD00067AEA4 /* AutoSolveTokenRequest.swift */; };
+		8C952983247ABFE400237BDF /* AutoSolveCancelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A04362477FAD00067AEA4 /* AutoSolveCancelResponse.swift */; };
+		8C952984247ABFE400237BDF /* AutoSolveTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A04392477FAD00067AEA4 /* AutoSolveTokenResponse.swift */; };
+		8C952985247ABFE400237BDF /* AutoSolveCancelRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A043A2477FAD00067AEA4 /* AutoSolveCancelRequest.swift */; };
+		8C9A04222477F9C30067AEA4 /* autosolveclient.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C9A04202477F9C30067AEA4 /* autosolveclient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C9A04312477FABB0067AEA4 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 8C9A04302477FABB0067AEA4 /* Cartfile */; };
+		8C9A043C2477FAED0067AEA4 /* AutoSolve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A043B2477FAED0067AEA4 /* AutoSolve.swift */; };
+		8C9A04422477FBE00067AEA4 /* JKVValue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9A043E2477FBE00067AEA4 /* JKVValue.framework */; };
+		8C9A04432477FBE00067AEA4 /* JKVValue.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9A043E2477FBE00067AEA4 /* JKVValue.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8C9A04442477FBE00067AEA4 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9A043F2477FBE00067AEA4 /* CocoaAsyncSocket.framework */; };
+		8C9A04452477FBE00067AEA4 /* CocoaAsyncSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9A043F2477FBE00067AEA4 /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8C9A044C2477FC300067AEA4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8C9A044B2477FC300067AEA4 /* README.md */; };
+		8C9A04522477FD5D0067AEA4 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8C9A04512477FD5D0067AEA4 /* .gitignore */; };
+		8CADA4D02478504700803AE0 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8CADA4CF2478504700803AE0 /* Podfile */; };
+		8CBCDCC72498202C0028EC03 /* autosolveclient.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 8CBCDCC62498202C0028EC03 /* autosolveclient.podspec */; };
+		8CBCDE1624982B0F0028EC03 /* RMQNameGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDAA24982B070028EC03 /* RMQNameGenerator.h */; };
+		8CBCDE1724982B0F0028EC03 /* RMQSuspendResumeDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDAB24982B080028EC03 /* RMQSuspendResumeDispatcher.h */; };
+		8CBCDE1824982B0F0028EC03 /* RMQConnectionRecover.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDAC24982B080028EC03 /* RMQConnectionRecover.m */; };
+		8CBCDE1924982B0F0028EC03 /* RMQBasicProperties+MergeDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDAD24982B080028EC03 /* RMQBasicProperties+MergeDefaults.m */; };
+		8CBCDE1A24982B0F0028EC03 /* RMQValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDAE24982B080028EC03 /* RMQValues.m */; };
+		8CBCDE1B24982B0F0028EC03 /* RMQConfirmations.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDAF24982B080028EC03 /* RMQConfirmations.h */; };
+		8CBCDE1C24982B0F0028EC03 /* RMQPKCS12CertificateConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDB024982B080028EC03 /* RMQPKCS12CertificateConverter.h */; };
+		8CBCDE1D24982B0F0028EC03 /* RMQConnectionRecovery.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDB124982B080028EC03 /* RMQConnectionRecovery.h */; };
+		8CBCDE1E24982B0F0028EC03 /* RMQFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDB224982B080028EC03 /* RMQFrame.m */; };
+		8CBCDE1F24982B0F0028EC03 /* RMQMethods+Convenience.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDB324982B080028EC03 /* RMQMethods+Convenience.h */; };
+		8CBCDE2024982B0F0028EC03 /* RMQHeartbeatSender.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDB424982B080028EC03 /* RMQHeartbeatSender.h */; };
+		8CBCDE2124982B0F0028EC03 /* RMQTCPSocketTransport.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDB524982B080028EC03 /* RMQTCPSocketTransport.h */; };
+		8CBCDE2224982B0F0028EC03 /* RMQParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDB624982B080028EC03 /* RMQParser.m */; };
+		8CBCDE2324982B0F0028EC03 /* RMQMethodMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDB724982B080028EC03 /* RMQMethodMap.m */; };
+		8CBCDE2424982B0F0028EC03 /* RMQConnectionRecover.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDB824982B080028EC03 /* RMQConnectionRecover.h */; };
+		8CBCDE2524982B0F0028EC03 /* RMQSender.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDB924982B080028EC03 /* RMQSender.h */; };
+		8CBCDE2624982B0F0028EC03 /* RMQFrameset.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDBA24982B080028EC03 /* RMQFrameset.m */; };
+		8CBCDE2724982B0F0028EC03 /* RMQDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDBB24982B080028EC03 /* RMQDispatcher.h */; };
+		8CBCDE2824982B0F0028EC03 /* RMQQueuingConnectionDelegateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDBC24982B080028EC03 /* RMQQueuingConnectionDelegateProxy.h */; };
+		8CBCDE2924982B0F0028EC03 /* RMQWaiterFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDBD24982B080028EC03 /* RMQWaiterFactory.h */; };
+		8CBCDE2A24982B0F0028EC03 /* RMQQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDBE24982B080028EC03 /* RMQQueue.m */; };
+		8CBCDE2B24982B0F0028EC03 /* RMQMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDBF24982B080028EC03 /* RMQMessage.h */; };
+		8CBCDE2C24982B0F0028EC03 /* RMQConfirmationTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDC024982B080028EC03 /* RMQConfirmationTransaction.m */; };
+		8CBCDE2D24982B0F0028EC03 /* RMQWaiter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDC124982B080028EC03 /* RMQWaiter.h */; };
+		8CBCDE2E24982B0F0028EC03 /* RMQGCDHeartbeatSender.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDC224982B080028EC03 /* RMQGCDHeartbeatSender.h */; };
+		8CBCDE2F24982B0F0028EC03 /* RMQTransactionalConfirmations.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDC324982B080028EC03 /* RMQTransactionalConfirmations.h */; };
+		8CBCDE3024982B0F0028EC03 /* RMQQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDC424982B080028EC03 /* RMQQueue.h */; };
+		8CBCDE3124982B0F0028EC03 /* RMQFramesetValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDC524982B090028EC03 /* RMQFramesetValidator.m */; };
+		8CBCDE3224982B0F0028EC03 /* RMQFrameHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDC624982B090028EC03 /* RMQFrameHandler.h */; };
+		8CBCDE3324982B0F0028EC03 /* RMQTable.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDC724982B090028EC03 /* RMQTable.h */; };
+		8CBCDE3424982B0F0028EC03 /* RMQClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDC824982B090028EC03 /* RMQClient.h */; };
+		8CBCDE3524982B0F0028EC03 /* RMQProcessInfoNameGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDC924982B090028EC03 /* RMQProcessInfoNameGenerator.h */; };
+		8CBCDE3624982B0F0028EC03 /* RMQGCDHeartbeatSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDCA24982B090028EC03 /* RMQGCDHeartbeatSender.m */; };
+		8CBCDE3724982B0F0028EC03 /* RMQBasicProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDCB24982B090028EC03 /* RMQBasicProperties.h */; };
+		8CBCDE3824982B0F0028EC03 /* RMQMethodDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDCC24982B090028EC03 /* RMQMethodDecoder.h */; };
+		8CBCDE3924982B0F0028EC03 /* RMQBasicProperties+MergeDefaults.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDCD24982B090028EC03 /* RMQBasicProperties+MergeDefaults.h */; };
+		8CBCDE3A24982B0F0028EC03 /* RMQTransactionalConfirmations.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDCE24982B090028EC03 /* RMQTransactionalConfirmations.m */; };
+		8CBCDE3B24982B0F0028EC03 /* RMQConnectionConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDCF24982B090028EC03 /* RMQConnectionConfig.h */; };
+		8CBCDE3C24982B0F0028EC03 /* RMQQueuingConnectionDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDD024982B090028EC03 /* RMQQueuingConnectionDelegateProxy.m */; };
+		8CBCDE3D24982B0F0028EC03 /* RMQTransportDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDD124982B090028EC03 /* RMQTransportDelegate.h */; };
+		8CBCDE3E24982B0F0028EC03 /* RMQClock.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDD224982B090028EC03 /* RMQClock.h */; };
+		8CBCDE3F24982B0F0028EC03 /* RMQStarter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDD324982B090028EC03 /* RMQStarter.h */; };
+		8CBCDE4024982B0F0028EC03 /* RMQConnectionDefaults.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDD424982B090028EC03 /* RMQConnectionDefaults.h */; };
+		8CBCDE4124982B0F0028EC03 /* RMQTickingClock.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDD524982B090028EC03 /* RMQTickingClock.m */; };
+		8CBCDE4224982B0F0028EC03 /* RMQMethods+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDD624982B090028EC03 /* RMQMethods+Convenience.m */; };
+		8CBCDE4324982B0F0028EC03 /* RMQPKCS12CertificateConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDD724982B0A0028EC03 /* RMQPKCS12CertificateConverter.m */; };
+		8CBCDE4424982B0F0028EC03 /* RMQMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDD824982B0A0028EC03 /* RMQMessage.m */; };
+		8CBCDE4524982B0F0028EC03 /* RMQMethodMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDD924982B0A0028EC03 /* RMQMethodMap.h */; };
+		8CBCDE4624982B0F0028EC03 /* RMQFramesetValidationResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDDA24982B0A0028EC03 /* RMQFramesetValidationResult.m */; };
+		8CBCDE4724982B0F0028EC03 /* RMQMethodDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDDB24982B0A0028EC03 /* RMQMethodDecoder.m */; };
+		8CBCDE4824982B0F0028EC03 /* RMQFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDDC24982B0A0028EC03 /* RMQFrame.h */; };
+		8CBCDE4924982B0F0028EC03 /* RMQGCDSerialQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDDD24982B0A0028EC03 /* RMQGCDSerialQueue.h */; };
+		8CBCDE4A24982B0F0028EC03 /* RMQTLSOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDDE24982B0A0028EC03 /* RMQTLSOptions.h */; };
+		8CBCDE4B24982B0F0028EC03 /* RMQTCPSocketTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDDF24982B0A0028EC03 /* RMQTCPSocketTransport.m */; };
+		8CBCDE4C24982B0F0028EC03 /* RMQURI.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDE024982B0A0028EC03 /* RMQURI.h */; };
+		8CBCDE4D24982B0F0028EC03 /* RMQConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDE124982B0A0028EC03 /* RMQConnection.h */; };
+		8CBCDE4E24982B0F0028EC03 /* RMQValues.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDE224982B0A0028EC03 /* RMQValues.h */; };
+		8CBCDE4F24982B0F0028EC03 /* RMQBasicProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDE324982B0A0028EC03 /* RMQBasicProperties.m */; };
+		8CBCDE5024982B0F0028EC03 /* RMQUnallocatedChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDE424982B0B0028EC03 /* RMQUnallocatedChannel.h */; };
+		8CBCDE5124982B0F0028EC03 /* RMQHandshaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDE524982B0B0028EC03 /* RMQHandshaker.m */; };
+		8CBCDE5224982B0F0028EC03 /* RMQAllocatedChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDE624982B0B0028EC03 /* RMQAllocatedChannel.m */; };
+		8CBCDE5324982B0F0028EC03 /* RMQFramesetValidationResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDE724982B0B0028EC03 /* RMQFramesetValidationResult.h */; };
+		8CBCDE5424982B0F0028EC03 /* RMQProtocolHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDE824982B0B0028EC03 /* RMQProtocolHeader.h */; };
+		8CBCDE5524982B0F0028EC03 /* RMQSemaphoreWaiter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDE924982B0B0028EC03 /* RMQSemaphoreWaiter.h */; };
+		8CBCDE5624982B0F0028EC03 /* RMQExchange.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDEA24982B0B0028EC03 /* RMQExchange.h */; };
+		8CBCDE5724982B0F0028EC03 /* RMQSynchronizedMutableDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDEB24982B0B0028EC03 /* RMQSynchronizedMutableDictionary.h */; };
+		8CBCDE5824982B0F0028EC03 /* RMQTCPSocketConfigurator.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDEC24982B0B0028EC03 /* RMQTCPSocketConfigurator.h */; };
+		8CBCDE5924982B0F0028EC03 /* RMQConsumerHandlers.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDED24982B0B0028EC03 /* RMQConsumerHandlers.h */; };
+		8CBCDE5A24982B0F0028EC03 /* RMQMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDEE24982B0B0028EC03 /* RMQMethods.h */; };
+		8CBCDE5B24982B0F0028EC03 /* RMQMultipleChannelAllocator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDEF24982B0B0028EC03 /* RMQMultipleChannelAllocator.m */; };
+		8CBCDE5C24982B0F0028EC03 /* RMQParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDF024982B0C0028EC03 /* RMQParser.h */; };
+		8CBCDE5D24982B0F0028EC03 /* RMQHeartbeat.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDF124982B0C0028EC03 /* RMQHeartbeat.h */; };
+		8CBCDE5E24982B0F0028EC03 /* RMQSuspendResumeDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDF224982B0C0028EC03 /* RMQSuspendResumeDispatcher.m */; };
+		8CBCDE5F24982B0F0028EC03 /* RMQConfirmationTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDF324982B0C0028EC03 /* RMQConfirmationTransaction.h */; };
+		8CBCDE6024982B0F0028EC03 /* RMQAllocatedChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDF424982B0C0028EC03 /* RMQAllocatedChannel.h */; };
+		8CBCDE6124982B0F0028EC03 /* RMQConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDF524982B0C0028EC03 /* RMQConnection.m */; };
+		8CBCDE6224982B0F0028EC03 /* RMQUnallocatedChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDF624982B0C0028EC03 /* RMQUnallocatedChannel.m */; };
+		8CBCDE6324982B0F0028EC03 /* RMQGCDSerialQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDF724982B0C0028EC03 /* RMQGCDSerialQueue.m */; };
+		8CBCDE6424982B0F0028EC03 /* RMQMultipleChannelAllocator.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDF824982B0C0028EC03 /* RMQMultipleChannelAllocator.h */; };
+		8CBCDE6524982B0F0028EC03 /* RMQConnectionDelegateLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDF924982B0C0028EC03 /* RMQConnectionDelegateLogger.m */; };
+		8CBCDE6624982B0F0028EC03 /* RMQLocalSerialQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDFA24982B0C0028EC03 /* RMQLocalSerialQueue.h */; };
+		8CBCDE6724982B0F0028EC03 /* RMQReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDFB24982B0C0028EC03 /* RMQReader.m */; };
+		8CBCDE6824982B0F0028EC03 /* RMQHeartbeat.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDFC24982B0D0028EC03 /* RMQHeartbeat.m */; };
+		8CBCDE6924982B0F0028EC03 /* RMQMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDFD24982B0D0028EC03 /* RMQMethods.m */; };
+		8CBCDE6A24982B0F0028EC03 /* RMQTransport.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDDFE24982B0D0028EC03 /* RMQTransport.h */; };
+		8CBCDE6B24982B0F0028EC03 /* RMQTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDDFF24982B0D0028EC03 /* RMQTable.m */; };
+		8CBCDE6C24982B0F0028EC03 /* RMQConsumer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDE0024982B0D0028EC03 /* RMQConsumer.h */; };
+		8CBCDE6D24982B0F0028EC03 /* RMQFramesetValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDE0124982B0D0028EC03 /* RMQFramesetValidator.h */; };
+		8CBCDE6E24982B0F0028EC03 /* RMQConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDE0224982B0D0028EC03 /* RMQConsumer.m */; };
+		8CBCDE6F24982B0F0028EC03 /* RMQSemaphoreWaiterFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDE0324982B0D0028EC03 /* RMQSemaphoreWaiterFactory.m */; };
+		8CBCDE7024982B0F0028EC03 /* RMQSemaphoreWaiter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDE0424982B0D0028EC03 /* RMQSemaphoreWaiter.m */; };
+		8CBCDE7124982B0F0028EC03 /* RMQProcessInfoNameGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDE0524982B0D0028EC03 /* RMQProcessInfoNameGenerator.m */; };
+		8CBCDE7224982B0F0028EC03 /* RMQErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDE0624982B0D0028EC03 /* RMQErrors.h */; };
+		8CBCDE7324982B0F0028EC03 /* RMQSemaphoreWaiterFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDE0724982B0E0028EC03 /* RMQSemaphoreWaiterFactory.h */; };
+		8CBCDE7424982B0F0028EC03 /* RMQExchange.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDE0824982B0E0028EC03 /* RMQExchange.m */; };
+		8CBCDE7524982B0F0028EC03 /* RMQChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDE0924982B0E0028EC03 /* RMQChannel.h */; };
+		8CBCDE7624982B0F0028EC03 /* RMQConnectionDelegateLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDE0A24982B0E0028EC03 /* RMQConnectionDelegateLogger.h */; };
+		8CBCDE7724982B0F0028EC03 /* RMQTLSOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDE0B24982B0E0028EC03 /* RMQTLSOptions.m */; };
+		8CBCDE7824982B0F0028EC03 /* RMQSynchronizedMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDE0C24982B0E0028EC03 /* RMQSynchronizedMutableDictionary.m */; };
+		8CBCDE7924982B0F0028EC03 /* RMQHandshaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDE0D24982B0E0028EC03 /* RMQHandshaker.h */; };
+		8CBCDE7A24982B0F0028EC03 /* RMQConnectionDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDE0E24982B0E0028EC03 /* RMQConnectionDelegate.h */; };
+		8CBCDE7B24982B0F0028EC03 /* RMQChannelAllocator.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDE0F24982B0E0028EC03 /* RMQChannelAllocator.h */; };
+		8CBCDE7C24982B0F0028EC03 /* RMQErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDE1024982B0E0028EC03 /* RMQErrors.m */; };
+		8CBCDE7D24982B0F0028EC03 /* RMQReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDE1124982B0E0028EC03 /* RMQReader.h */; };
+		8CBCDE7E24982B0F0028EC03 /* RMQConnectionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDE1224982B0E0028EC03 /* RMQConnectionConfig.m */; };
+		8CBCDE7F24982B0F0028EC03 /* RMQProtocolHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDE1324982B0F0028EC03 /* RMQProtocolHeader.m */; };
+		8CBCDE8024982B0F0028EC03 /* RMQFrameset.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDE1424982B0F0028EC03 /* RMQFrameset.h */; };
+		8CBCDE8124982B0F0028EC03 /* RMQTickingClock.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDE1524982B0F0028EC03 /* RMQTickingClock.h */; };
+		8CBCDE8624982B270028EC03 /* ObservableVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDE8224982B270028EC03 /* ObservableVariable.swift */; };
+		8CBCDE8724982B270028EC03 /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDE8324982B270028EC03 /* Signal.swift */; };
+		8CBCDE8824982B270028EC03 /* Emit.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBCDE8424982B270028EC03 /* Emit.h */; };
+		8CBCDE8924982B270028EC03 /* RWLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCDE8524982B270028EC03 /* RWLock.swift */; };
+		E8A82216C4F82AC5DCCEFF86 /* AutoSolveDeliveryHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A8239B7CFCA2F54F67EF6C /* AutoSolveDeliveryHandler.swift */; };
+		E8A825FADAD2B3AF73058B7B /* AutoSolveConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A827480718D59BD59621D7 /* AutoSolveConstants.swift */; };
+		E8A8268771B4458FCCEBFEDD /* AutoSolveConnectionEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A82DD604F21FE3E1DBD663 /* AutoSolveConnectionEvent.swift */; };
+		E8A826BD6AA8FB53B59B2036 /* Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A820F58D3DB93E4D99659D /* Encoding.swift */; };
+		E8A82F88AEB2B77DC4AFB91F /* AutoSolveError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A825792FFDF536D68187C1 /* AutoSolveError.swift */; };
+		E8A82FFC14294E2E406D354D /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A82D5F92931A77CEDF2DB1 /* Validation.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8C9A044A2477FBE00067AEA4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8C9A04452477FBE00067AEA4 /* CocoaAsyncSocket.framework in Embed Frameworks */,
+				8C9A04432477FBE00067AEA4 /* JKVValue.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8C7AB3E1247B40CD00FC9073 /* AutoSolveDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSolveDelegate.swift; sourceTree = "<group>"; };
+		8C95295A247AAE9300237BDF /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		8C9A041D2477F9C30067AEA4 /* AutoSolveClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AutoSolveClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C9A04202477F9C30067AEA4 /* autosolveclient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = autosolveclient.h; sourceTree = "<group>"; };
+		8C9A04212477F9C30067AEA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C9A04302477FABB0067AEA4 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		8C9A04352477FAD00067AEA4 /* AutoSolveTokenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSolveTokenRequest.swift; sourceTree = "<group>"; };
+		8C9A04362477FAD00067AEA4 /* AutoSolveCancelResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSolveCancelResponse.swift; sourceTree = "<group>"; };
+		8C9A04372477FAD00067AEA4 /* AutoSolveRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSolveRequest.swift; sourceTree = "<group>"; };
+		8C9A04382477FAD00067AEA4 /* AutoSolveResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSolveResponse.swift; sourceTree = "<group>"; };
+		8C9A04392477FAD00067AEA4 /* AutoSolveTokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSolveTokenResponse.swift; sourceTree = "<group>"; };
+		8C9A043A2477FAD00067AEA4 /* AutoSolveCancelRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSolveCancelRequest.swift; sourceTree = "<group>"; };
+		8C9A043B2477FAED0067AEA4 /* AutoSolve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoSolve.swift; sourceTree = "<group>"; };
+		8C9A043E2477FBE00067AEA4 /* JKVValue.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JKVValue.framework; path = Carthage/Build/iOS/JKVValue.framework; sourceTree = "<group>"; };
+		8C9A043F2477FBE00067AEA4 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/iOS/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
+		8C9A04402477FBE00067AEA4 /* Emit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Emit.framework; path = Carthage/Build/iOS/Emit.framework; sourceTree = "<group>"; };
+		8C9A04412477FBE00067AEA4 /* RMQClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RMQClient.framework; path = Carthage/Build/iOS/RMQClient.framework; sourceTree = "<group>"; };
+		8C9A044B2477FC300067AEA4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8C9A04512477FD5D0067AEA4 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		8CADA4CF2478504700803AE0 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8CBCDCC62498202C0028EC03 /* autosolveclient.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = autosolveclient.podspec; sourceTree = "<group>"; };
+		8CBCDDAA24982B070028EC03 /* RMQNameGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQNameGenerator.h; sourceTree = "<group>"; };
+		8CBCDDAB24982B080028EC03 /* RMQSuspendResumeDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQSuspendResumeDispatcher.h; sourceTree = "<group>"; };
+		8CBCDDAC24982B080028EC03 /* RMQConnectionRecover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQConnectionRecover.m; sourceTree = "<group>"; };
+		8CBCDDAD24982B080028EC03 /* RMQBasicProperties+MergeDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RMQBasicProperties+MergeDefaults.m"; sourceTree = "<group>"; };
+		8CBCDDAE24982B080028EC03 /* RMQValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQValues.m; sourceTree = "<group>"; };
+		8CBCDDAF24982B080028EC03 /* RMQConfirmations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQConfirmations.h; sourceTree = "<group>"; };
+		8CBCDDB024982B080028EC03 /* RMQPKCS12CertificateConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQPKCS12CertificateConverter.h; sourceTree = "<group>"; };
+		8CBCDDB124982B080028EC03 /* RMQConnectionRecovery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQConnectionRecovery.h; sourceTree = "<group>"; };
+		8CBCDDB224982B080028EC03 /* RMQFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQFrame.m; sourceTree = "<group>"; };
+		8CBCDDB324982B080028EC03 /* RMQMethods+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RMQMethods+Convenience.h"; sourceTree = "<group>"; };
+		8CBCDDB424982B080028EC03 /* RMQHeartbeatSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQHeartbeatSender.h; sourceTree = "<group>"; };
+		8CBCDDB524982B080028EC03 /* RMQTCPSocketTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQTCPSocketTransport.h; sourceTree = "<group>"; };
+		8CBCDDB624982B080028EC03 /* RMQParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQParser.m; sourceTree = "<group>"; };
+		8CBCDDB724982B080028EC03 /* RMQMethodMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQMethodMap.m; sourceTree = "<group>"; };
+		8CBCDDB824982B080028EC03 /* RMQConnectionRecover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQConnectionRecover.h; sourceTree = "<group>"; };
+		8CBCDDB924982B080028EC03 /* RMQSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQSender.h; sourceTree = "<group>"; };
+		8CBCDDBA24982B080028EC03 /* RMQFrameset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQFrameset.m; sourceTree = "<group>"; };
+		8CBCDDBB24982B080028EC03 /* RMQDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQDispatcher.h; sourceTree = "<group>"; };
+		8CBCDDBC24982B080028EC03 /* RMQQueuingConnectionDelegateProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQQueuingConnectionDelegateProxy.h; sourceTree = "<group>"; };
+		8CBCDDBD24982B080028EC03 /* RMQWaiterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQWaiterFactory.h; sourceTree = "<group>"; };
+		8CBCDDBE24982B080028EC03 /* RMQQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQQueue.m; sourceTree = "<group>"; };
+		8CBCDDBF24982B080028EC03 /* RMQMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQMessage.h; sourceTree = "<group>"; };
+		8CBCDDC024982B080028EC03 /* RMQConfirmationTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQConfirmationTransaction.m; sourceTree = "<group>"; };
+		8CBCDDC124982B080028EC03 /* RMQWaiter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQWaiter.h; sourceTree = "<group>"; };
+		8CBCDDC224982B080028EC03 /* RMQGCDHeartbeatSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQGCDHeartbeatSender.h; sourceTree = "<group>"; };
+		8CBCDDC324982B080028EC03 /* RMQTransactionalConfirmations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQTransactionalConfirmations.h; sourceTree = "<group>"; };
+		8CBCDDC424982B080028EC03 /* RMQQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQQueue.h; sourceTree = "<group>"; };
+		8CBCDDC524982B090028EC03 /* RMQFramesetValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQFramesetValidator.m; sourceTree = "<group>"; };
+		8CBCDDC624982B090028EC03 /* RMQFrameHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQFrameHandler.h; sourceTree = "<group>"; };
+		8CBCDDC724982B090028EC03 /* RMQTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQTable.h; sourceTree = "<group>"; };
+		8CBCDDC824982B090028EC03 /* RMQClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQClient.h; sourceTree = "<group>"; };
+		8CBCDDC924982B090028EC03 /* RMQProcessInfoNameGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQProcessInfoNameGenerator.h; sourceTree = "<group>"; };
+		8CBCDDCA24982B090028EC03 /* RMQGCDHeartbeatSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQGCDHeartbeatSender.m; sourceTree = "<group>"; };
+		8CBCDDCB24982B090028EC03 /* RMQBasicProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQBasicProperties.h; sourceTree = "<group>"; };
+		8CBCDDCC24982B090028EC03 /* RMQMethodDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQMethodDecoder.h; sourceTree = "<group>"; };
+		8CBCDDCD24982B090028EC03 /* RMQBasicProperties+MergeDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RMQBasicProperties+MergeDefaults.h"; sourceTree = "<group>"; };
+		8CBCDDCE24982B090028EC03 /* RMQTransactionalConfirmations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQTransactionalConfirmations.m; sourceTree = "<group>"; };
+		8CBCDDCF24982B090028EC03 /* RMQConnectionConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQConnectionConfig.h; sourceTree = "<group>"; };
+		8CBCDDD024982B090028EC03 /* RMQQueuingConnectionDelegateProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQQueuingConnectionDelegateProxy.m; sourceTree = "<group>"; };
+		8CBCDDD124982B090028EC03 /* RMQTransportDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQTransportDelegate.h; sourceTree = "<group>"; };
+		8CBCDDD224982B090028EC03 /* RMQClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQClock.h; sourceTree = "<group>"; };
+		8CBCDDD324982B090028EC03 /* RMQStarter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQStarter.h; sourceTree = "<group>"; };
+		8CBCDDD424982B090028EC03 /* RMQConnectionDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQConnectionDefaults.h; sourceTree = "<group>"; };
+		8CBCDDD524982B090028EC03 /* RMQTickingClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQTickingClock.m; sourceTree = "<group>"; };
+		8CBCDDD624982B090028EC03 /* RMQMethods+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RMQMethods+Convenience.m"; sourceTree = "<group>"; };
+		8CBCDDD724982B0A0028EC03 /* RMQPKCS12CertificateConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQPKCS12CertificateConverter.m; sourceTree = "<group>"; };
+		8CBCDDD824982B0A0028EC03 /* RMQMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQMessage.m; sourceTree = "<group>"; };
+		8CBCDDD924982B0A0028EC03 /* RMQMethodMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQMethodMap.h; sourceTree = "<group>"; };
+		8CBCDDDA24982B0A0028EC03 /* RMQFramesetValidationResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQFramesetValidationResult.m; sourceTree = "<group>"; };
+		8CBCDDDB24982B0A0028EC03 /* RMQMethodDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQMethodDecoder.m; sourceTree = "<group>"; };
+		8CBCDDDC24982B0A0028EC03 /* RMQFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQFrame.h; sourceTree = "<group>"; };
+		8CBCDDDD24982B0A0028EC03 /* RMQGCDSerialQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQGCDSerialQueue.h; sourceTree = "<group>"; };
+		8CBCDDDE24982B0A0028EC03 /* RMQTLSOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQTLSOptions.h; sourceTree = "<group>"; };
+		8CBCDDDF24982B0A0028EC03 /* RMQTCPSocketTransport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQTCPSocketTransport.m; sourceTree = "<group>"; };
+		8CBCDDE024982B0A0028EC03 /* RMQURI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQURI.h; sourceTree = "<group>"; };
+		8CBCDDE124982B0A0028EC03 /* RMQConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQConnection.h; sourceTree = "<group>"; };
+		8CBCDDE224982B0A0028EC03 /* RMQValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQValues.h; sourceTree = "<group>"; };
+		8CBCDDE324982B0A0028EC03 /* RMQBasicProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQBasicProperties.m; sourceTree = "<group>"; };
+		8CBCDDE424982B0B0028EC03 /* RMQUnallocatedChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQUnallocatedChannel.h; sourceTree = "<group>"; };
+		8CBCDDE524982B0B0028EC03 /* RMQHandshaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQHandshaker.m; sourceTree = "<group>"; };
+		8CBCDDE624982B0B0028EC03 /* RMQAllocatedChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQAllocatedChannel.m; sourceTree = "<group>"; };
+		8CBCDDE724982B0B0028EC03 /* RMQFramesetValidationResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQFramesetValidationResult.h; sourceTree = "<group>"; };
+		8CBCDDE824982B0B0028EC03 /* RMQProtocolHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQProtocolHeader.h; sourceTree = "<group>"; };
+		8CBCDDE924982B0B0028EC03 /* RMQSemaphoreWaiter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQSemaphoreWaiter.h; sourceTree = "<group>"; };
+		8CBCDDEA24982B0B0028EC03 /* RMQExchange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQExchange.h; sourceTree = "<group>"; };
+		8CBCDDEB24982B0B0028EC03 /* RMQSynchronizedMutableDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQSynchronizedMutableDictionary.h; sourceTree = "<group>"; };
+		8CBCDDEC24982B0B0028EC03 /* RMQTCPSocketConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQTCPSocketConfigurator.h; sourceTree = "<group>"; };
+		8CBCDDED24982B0B0028EC03 /* RMQConsumerHandlers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQConsumerHandlers.h; sourceTree = "<group>"; };
+		8CBCDDEE24982B0B0028EC03 /* RMQMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQMethods.h; sourceTree = "<group>"; };
+		8CBCDDEF24982B0B0028EC03 /* RMQMultipleChannelAllocator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQMultipleChannelAllocator.m; sourceTree = "<group>"; };
+		8CBCDDF024982B0C0028EC03 /* RMQParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQParser.h; sourceTree = "<group>"; };
+		8CBCDDF124982B0C0028EC03 /* RMQHeartbeat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQHeartbeat.h; sourceTree = "<group>"; };
+		8CBCDDF224982B0C0028EC03 /* RMQSuspendResumeDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQSuspendResumeDispatcher.m; sourceTree = "<group>"; };
+		8CBCDDF324982B0C0028EC03 /* RMQConfirmationTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQConfirmationTransaction.h; sourceTree = "<group>"; };
+		8CBCDDF424982B0C0028EC03 /* RMQAllocatedChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQAllocatedChannel.h; sourceTree = "<group>"; };
+		8CBCDDF524982B0C0028EC03 /* RMQConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQConnection.m; sourceTree = "<group>"; };
+		8CBCDDF624982B0C0028EC03 /* RMQUnallocatedChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQUnallocatedChannel.m; sourceTree = "<group>"; };
+		8CBCDDF724982B0C0028EC03 /* RMQGCDSerialQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQGCDSerialQueue.m; sourceTree = "<group>"; };
+		8CBCDDF824982B0C0028EC03 /* RMQMultipleChannelAllocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQMultipleChannelAllocator.h; sourceTree = "<group>"; };
+		8CBCDDF924982B0C0028EC03 /* RMQConnectionDelegateLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQConnectionDelegateLogger.m; sourceTree = "<group>"; };
+		8CBCDDFA24982B0C0028EC03 /* RMQLocalSerialQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQLocalSerialQueue.h; sourceTree = "<group>"; };
+		8CBCDDFB24982B0C0028EC03 /* RMQReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQReader.m; sourceTree = "<group>"; };
+		8CBCDDFC24982B0D0028EC03 /* RMQHeartbeat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQHeartbeat.m; sourceTree = "<group>"; };
+		8CBCDDFD24982B0D0028EC03 /* RMQMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQMethods.m; sourceTree = "<group>"; };
+		8CBCDDFE24982B0D0028EC03 /* RMQTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQTransport.h; sourceTree = "<group>"; };
+		8CBCDDFF24982B0D0028EC03 /* RMQTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQTable.m; sourceTree = "<group>"; };
+		8CBCDE0024982B0D0028EC03 /* RMQConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQConsumer.h; sourceTree = "<group>"; };
+		8CBCDE0124982B0D0028EC03 /* RMQFramesetValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQFramesetValidator.h; sourceTree = "<group>"; };
+		8CBCDE0224982B0D0028EC03 /* RMQConsumer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQConsumer.m; sourceTree = "<group>"; };
+		8CBCDE0324982B0D0028EC03 /* RMQSemaphoreWaiterFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQSemaphoreWaiterFactory.m; sourceTree = "<group>"; };
+		8CBCDE0424982B0D0028EC03 /* RMQSemaphoreWaiter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQSemaphoreWaiter.m; sourceTree = "<group>"; };
+		8CBCDE0524982B0D0028EC03 /* RMQProcessInfoNameGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQProcessInfoNameGenerator.m; sourceTree = "<group>"; };
+		8CBCDE0624982B0D0028EC03 /* RMQErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQErrors.h; sourceTree = "<group>"; };
+		8CBCDE0724982B0E0028EC03 /* RMQSemaphoreWaiterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQSemaphoreWaiterFactory.h; sourceTree = "<group>"; };
+		8CBCDE0824982B0E0028EC03 /* RMQExchange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQExchange.m; sourceTree = "<group>"; };
+		8CBCDE0924982B0E0028EC03 /* RMQChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQChannel.h; sourceTree = "<group>"; };
+		8CBCDE0A24982B0E0028EC03 /* RMQConnectionDelegateLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQConnectionDelegateLogger.h; sourceTree = "<group>"; };
+		8CBCDE0B24982B0E0028EC03 /* RMQTLSOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQTLSOptions.m; sourceTree = "<group>"; };
+		8CBCDE0C24982B0E0028EC03 /* RMQSynchronizedMutableDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQSynchronizedMutableDictionary.m; sourceTree = "<group>"; };
+		8CBCDE0D24982B0E0028EC03 /* RMQHandshaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQHandshaker.h; sourceTree = "<group>"; };
+		8CBCDE0E24982B0E0028EC03 /* RMQConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQConnectionDelegate.h; sourceTree = "<group>"; };
+		8CBCDE0F24982B0E0028EC03 /* RMQChannelAllocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQChannelAllocator.h; sourceTree = "<group>"; };
+		8CBCDE1024982B0E0028EC03 /* RMQErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQErrors.m; sourceTree = "<group>"; };
+		8CBCDE1124982B0E0028EC03 /* RMQReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQReader.h; sourceTree = "<group>"; };
+		8CBCDE1224982B0E0028EC03 /* RMQConnectionConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQConnectionConfig.m; sourceTree = "<group>"; };
+		8CBCDE1324982B0F0028EC03 /* RMQProtocolHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMQProtocolHeader.m; sourceTree = "<group>"; };
+		8CBCDE1424982B0F0028EC03 /* RMQFrameset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQFrameset.h; sourceTree = "<group>"; };
+		8CBCDE1524982B0F0028EC03 /* RMQTickingClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQTickingClock.h; sourceTree = "<group>"; };
+		8CBCDE8224982B270028EC03 /* ObservableVariable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObservableVariable.swift; path = emit/Sources/ObservableVariable.swift; sourceTree = SOURCE_ROOT; };
+		8CBCDE8324982B270028EC03 /* Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Signal.swift; path = emit/Sources/Signal.swift; sourceTree = SOURCE_ROOT; };
+		8CBCDE8424982B270028EC03 /* Emit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Emit.h; path = emit/Sources/Emit.h; sourceTree = SOURCE_ROOT; };
+		8CBCDE8524982B270028EC03 /* RWLock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RWLock.swift; path = emit/Sources/RWLock.swift; sourceTree = SOURCE_ROOT; };
+		E8A820F58D3DB93E4D99659D /* Encoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encoding.swift; sourceTree = "<group>"; };
+		E8A8239B7CFCA2F54F67EF6C /* AutoSolveDeliveryHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoSolveDeliveryHandler.swift; sourceTree = "<group>"; };
+		E8A825792FFDF536D68187C1 /* AutoSolveError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoSolveError.swift; sourceTree = "<group>"; };
+		E8A827480718D59BD59621D7 /* AutoSolveConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoSolveConstants.swift; sourceTree = "<group>"; };
+		E8A82D5F92931A77CEDF2DB1 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		E8A82DD604F21FE3E1DBD663 /* AutoSolveConnectionEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoSolveConnectionEvent.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8C9A041A2477F9C30067AEA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C9A04442477FBE00067AEA4 /* CocoaAsyncSocket.framework in Frameworks */,
+				8C9A04422477FBE00067AEA4 /* JKVValue.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8C6701CB247B14540031AA31 /* AutoSolveConnectionDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				8C7AB3E1247B40CD00FC9073 /* AutoSolveDelegate.swift */,
+				E8A82DD604F21FE3E1DBD663 /* AutoSolveConnectionEvent.swift */,
+			);
+			path = AutoSolveConnectionDelegate;
+			sourceTree = "<group>";
+		};
+		8C9A04132477F9C30067AEA4 = {
+			isa = PBXGroup;
+			children = (
+				8CBCDCC62498202C0028EC03 /* autosolveclient.podspec */,
+				8C95295A247AAE9300237BDF /* LICENSE.txt */,
+				8CADA4CF2478504700803AE0 /* Podfile */,
+				8C9A04512477FD5D0067AEA4 /* .gitignore */,
+				8C9A044B2477FC300067AEA4 /* README.md */,
+				8C9A04302477FABB0067AEA4 /* Cartfile */,
+				8C9A041F2477F9C30067AEA4 /* AutoSolveClient */,
+				8C9A041E2477F9C30067AEA4 /* Products */,
+				8C9A043D2477FBE00067AEA4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8C9A041E2477F9C30067AEA4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C9A041D2477F9C30067AEA4 /* AutoSolveClient.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C9A041F2477F9C30067AEA4 /* AutoSolveClient */ = {
+			isa = PBXGroup;
+			children = (
+				8CBCDCCD24982A930028EC03 /* RMQ */,
+				8CBCDCCC24982A8B0028EC03 /* Emit */,
+				8C6701CB247B14540031AA31 /* AutoSolveConnectionDelegate */,
+				8C9A043B2477FAED0067AEA4 /* AutoSolve.swift */,
+				8C9A04342477FAD00067AEA4 /* Messaging */,
+				8C9A04202477F9C30067AEA4 /* autosolveclient.h */,
+				8C9A04212477F9C30067AEA4 /* Info.plist */,
+				E8A8245D4275885CC99DD430 /* Utils */,
+			);
+			path = AutoSolveClient;
+			sourceTree = "<group>";
+		};
+		8C9A04342477FAD00067AEA4 /* Messaging */ = {
+			isa = PBXGroup;
+			children = (
+				8C9A04352477FAD00067AEA4 /* AutoSolveTokenRequest.swift */,
+				8C9A04362477FAD00067AEA4 /* AutoSolveCancelResponse.swift */,
+				8C9A04372477FAD00067AEA4 /* AutoSolveRequest.swift */,
+				8C9A04382477FAD00067AEA4 /* AutoSolveResponse.swift */,
+				8C9A04392477FAD00067AEA4 /* AutoSolveTokenResponse.swift */,
+				8C9A043A2477FAD00067AEA4 /* AutoSolveCancelRequest.swift */,
+			);
+			path = Messaging;
+			sourceTree = "<group>";
+		};
+		8C9A043D2477FBE00067AEA4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C9A043F2477FBE00067AEA4 /* CocoaAsyncSocket.framework */,
+				8C9A04402477FBE00067AEA4 /* Emit.framework */,
+				8C9A043E2477FBE00067AEA4 /* JKVValue.framework */,
+				8C9A04412477FBE00067AEA4 /* RMQClient.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8CBCDCCC24982A8B0028EC03 /* Emit */ = {
+			isa = PBXGroup;
+			children = (
+				8CBCDE8424982B270028EC03 /* Emit.h */,
+				8CBCDE8224982B270028EC03 /* ObservableVariable.swift */,
+				8CBCDE8524982B270028EC03 /* RWLock.swift */,
+				8CBCDE8324982B270028EC03 /* Signal.swift */,
+			);
+			path = Emit;
+			sourceTree = "<group>";
+		};
+		8CBCDCCD24982A930028EC03 /* RMQ */ = {
+			isa = PBXGroup;
+			children = (
+				8CBCDDF424982B0C0028EC03 /* RMQAllocatedChannel.h */,
+				8CBCDDE624982B0B0028EC03 /* RMQAllocatedChannel.m */,
+				8CBCDDCB24982B090028EC03 /* RMQBasicProperties.h */,
+				8CBCDDE324982B0A0028EC03 /* RMQBasicProperties.m */,
+				8CBCDDCD24982B090028EC03 /* RMQBasicProperties+MergeDefaults.h */,
+				8CBCDDAD24982B080028EC03 /* RMQBasicProperties+MergeDefaults.m */,
+				8CBCDE0924982B0E0028EC03 /* RMQChannel.h */,
+				8CBCDE0F24982B0E0028EC03 /* RMQChannelAllocator.h */,
+				8CBCDDC824982B090028EC03 /* RMQClient.h */,
+				8CBCDDD224982B090028EC03 /* RMQClock.h */,
+				8CBCDDAF24982B080028EC03 /* RMQConfirmations.h */,
+				8CBCDDF324982B0C0028EC03 /* RMQConfirmationTransaction.h */,
+				8CBCDDC024982B080028EC03 /* RMQConfirmationTransaction.m */,
+				8CBCDDE124982B0A0028EC03 /* RMQConnection.h */,
+				8CBCDDF524982B0C0028EC03 /* RMQConnection.m */,
+				8CBCDDCF24982B090028EC03 /* RMQConnectionConfig.h */,
+				8CBCDE1224982B0E0028EC03 /* RMQConnectionConfig.m */,
+				8CBCDDD424982B090028EC03 /* RMQConnectionDefaults.h */,
+				8CBCDE0E24982B0E0028EC03 /* RMQConnectionDelegate.h */,
+				8CBCDE0A24982B0E0028EC03 /* RMQConnectionDelegateLogger.h */,
+				8CBCDDF924982B0C0028EC03 /* RMQConnectionDelegateLogger.m */,
+				8CBCDDB824982B080028EC03 /* RMQConnectionRecover.h */,
+				8CBCDDAC24982B080028EC03 /* RMQConnectionRecover.m */,
+				8CBCDDB124982B080028EC03 /* RMQConnectionRecovery.h */,
+				8CBCDE0024982B0D0028EC03 /* RMQConsumer.h */,
+				8CBCDE0224982B0D0028EC03 /* RMQConsumer.m */,
+				8CBCDDED24982B0B0028EC03 /* RMQConsumerHandlers.h */,
+				8CBCDDBB24982B080028EC03 /* RMQDispatcher.h */,
+				8CBCDE0624982B0D0028EC03 /* RMQErrors.h */,
+				8CBCDE1024982B0E0028EC03 /* RMQErrors.m */,
+				8CBCDDEA24982B0B0028EC03 /* RMQExchange.h */,
+				8CBCDE0824982B0E0028EC03 /* RMQExchange.m */,
+				8CBCDDDC24982B0A0028EC03 /* RMQFrame.h */,
+				8CBCDDB224982B080028EC03 /* RMQFrame.m */,
+				8CBCDDC624982B090028EC03 /* RMQFrameHandler.h */,
+				8CBCDE1424982B0F0028EC03 /* RMQFrameset.h */,
+				8CBCDDBA24982B080028EC03 /* RMQFrameset.m */,
+				8CBCDDE724982B0B0028EC03 /* RMQFramesetValidationResult.h */,
+				8CBCDDDA24982B0A0028EC03 /* RMQFramesetValidationResult.m */,
+				8CBCDE0124982B0D0028EC03 /* RMQFramesetValidator.h */,
+				8CBCDDC524982B090028EC03 /* RMQFramesetValidator.m */,
+				8CBCDDC224982B080028EC03 /* RMQGCDHeartbeatSender.h */,
+				8CBCDDCA24982B090028EC03 /* RMQGCDHeartbeatSender.m */,
+				8CBCDDDD24982B0A0028EC03 /* RMQGCDSerialQueue.h */,
+				8CBCDDF724982B0C0028EC03 /* RMQGCDSerialQueue.m */,
+				8CBCDE0D24982B0E0028EC03 /* RMQHandshaker.h */,
+				8CBCDDE524982B0B0028EC03 /* RMQHandshaker.m */,
+				8CBCDDF124982B0C0028EC03 /* RMQHeartbeat.h */,
+				8CBCDDFC24982B0D0028EC03 /* RMQHeartbeat.m */,
+				8CBCDDB424982B080028EC03 /* RMQHeartbeatSender.h */,
+				8CBCDDFA24982B0C0028EC03 /* RMQLocalSerialQueue.h */,
+				8CBCDDBF24982B080028EC03 /* RMQMessage.h */,
+				8CBCDDD824982B0A0028EC03 /* RMQMessage.m */,
+				8CBCDDCC24982B090028EC03 /* RMQMethodDecoder.h */,
+				8CBCDDDB24982B0A0028EC03 /* RMQMethodDecoder.m */,
+				8CBCDDD924982B0A0028EC03 /* RMQMethodMap.h */,
+				8CBCDDB724982B080028EC03 /* RMQMethodMap.m */,
+				8CBCDDEE24982B0B0028EC03 /* RMQMethods.h */,
+				8CBCDDFD24982B0D0028EC03 /* RMQMethods.m */,
+				8CBCDDB324982B080028EC03 /* RMQMethods+Convenience.h */,
+				8CBCDDD624982B090028EC03 /* RMQMethods+Convenience.m */,
+				8CBCDDF824982B0C0028EC03 /* RMQMultipleChannelAllocator.h */,
+				8CBCDDEF24982B0B0028EC03 /* RMQMultipleChannelAllocator.m */,
+				8CBCDDAA24982B070028EC03 /* RMQNameGenerator.h */,
+				8CBCDDF024982B0C0028EC03 /* RMQParser.h */,
+				8CBCDDB624982B080028EC03 /* RMQParser.m */,
+				8CBCDDB024982B080028EC03 /* RMQPKCS12CertificateConverter.h */,
+				8CBCDDD724982B0A0028EC03 /* RMQPKCS12CertificateConverter.m */,
+				8CBCDDC924982B090028EC03 /* RMQProcessInfoNameGenerator.h */,
+				8CBCDE0524982B0D0028EC03 /* RMQProcessInfoNameGenerator.m */,
+				8CBCDDE824982B0B0028EC03 /* RMQProtocolHeader.h */,
+				8CBCDE1324982B0F0028EC03 /* RMQProtocolHeader.m */,
+				8CBCDDC424982B080028EC03 /* RMQQueue.h */,
+				8CBCDDBE24982B080028EC03 /* RMQQueue.m */,
+				8CBCDDBC24982B080028EC03 /* RMQQueuingConnectionDelegateProxy.h */,
+				8CBCDDD024982B090028EC03 /* RMQQueuingConnectionDelegateProxy.m */,
+				8CBCDE1124982B0E0028EC03 /* RMQReader.h */,
+				8CBCDDFB24982B0C0028EC03 /* RMQReader.m */,
+				8CBCDDE924982B0B0028EC03 /* RMQSemaphoreWaiter.h */,
+				8CBCDE0424982B0D0028EC03 /* RMQSemaphoreWaiter.m */,
+				8CBCDE0724982B0E0028EC03 /* RMQSemaphoreWaiterFactory.h */,
+				8CBCDE0324982B0D0028EC03 /* RMQSemaphoreWaiterFactory.m */,
+				8CBCDDB924982B080028EC03 /* RMQSender.h */,
+				8CBCDDD324982B090028EC03 /* RMQStarter.h */,
+				8CBCDDAB24982B080028EC03 /* RMQSuspendResumeDispatcher.h */,
+				8CBCDDF224982B0C0028EC03 /* RMQSuspendResumeDispatcher.m */,
+				8CBCDDEB24982B0B0028EC03 /* RMQSynchronizedMutableDictionary.h */,
+				8CBCDE0C24982B0E0028EC03 /* RMQSynchronizedMutableDictionary.m */,
+				8CBCDDC724982B090028EC03 /* RMQTable.h */,
+				8CBCDDFF24982B0D0028EC03 /* RMQTable.m */,
+				8CBCDDEC24982B0B0028EC03 /* RMQTCPSocketConfigurator.h */,
+				8CBCDDB524982B080028EC03 /* RMQTCPSocketTransport.h */,
+				8CBCDDDF24982B0A0028EC03 /* RMQTCPSocketTransport.m */,
+				8CBCDE1524982B0F0028EC03 /* RMQTickingClock.h */,
+				8CBCDDD524982B090028EC03 /* RMQTickingClock.m */,
+				8CBCDDDE24982B0A0028EC03 /* RMQTLSOptions.h */,
+				8CBCDE0B24982B0E0028EC03 /* RMQTLSOptions.m */,
+				8CBCDDC324982B080028EC03 /* RMQTransactionalConfirmations.h */,
+				8CBCDDCE24982B090028EC03 /* RMQTransactionalConfirmations.m */,
+				8CBCDDFE24982B0D0028EC03 /* RMQTransport.h */,
+				8CBCDDD124982B090028EC03 /* RMQTransportDelegate.h */,
+				8CBCDDE424982B0B0028EC03 /* RMQUnallocatedChannel.h */,
+				8CBCDDF624982B0C0028EC03 /* RMQUnallocatedChannel.m */,
+				8CBCDDE024982B0A0028EC03 /* RMQURI.h */,
+				8CBCDDE224982B0A0028EC03 /* RMQValues.h */,
+				8CBCDDAE24982B080028EC03 /* RMQValues.m */,
+				8CBCDDC124982B080028EC03 /* RMQWaiter.h */,
+				8CBCDDBD24982B080028EC03 /* RMQWaiterFactory.h */,
+			);
+			path = RMQ;
+			sourceTree = "<group>";
+		};
+		E8A8245D4275885CC99DD430 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E8A825792FFDF536D68187C1 /* AutoSolveError.swift */,
+				E8A827480718D59BD59621D7 /* AutoSolveConstants.swift */,
+				E8A820F58D3DB93E4D99659D /* Encoding.swift */,
+				E8A82D5F92931A77CEDF2DB1 /* Validation.swift */,
+				E8A8239B7CFCA2F54F67EF6C /* AutoSolveDeliveryHandler.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8C9A04182477F9C30067AEA4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CBCDE5824982B0F0028EC03 /* RMQTCPSocketConfigurator.h in Headers */,
+				8CBCDE3024982B0F0028EC03 /* RMQQueue.h in Headers */,
+				8CBCDE7B24982B0F0028EC03 /* RMQChannelAllocator.h in Headers */,
+				8CBCDE2724982B0F0028EC03 /* RMQDispatcher.h in Headers */,
+				8CBCDE1D24982B0F0028EC03 /* RMQConnectionRecovery.h in Headers */,
+				8CBCDE2824982B0F0028EC03 /* RMQQueuingConnectionDelegateProxy.h in Headers */,
+				8CBCDE5724982B0F0028EC03 /* RMQSynchronizedMutableDictionary.h in Headers */,
+				8CBCDE3224982B0F0028EC03 /* RMQFrameHandler.h in Headers */,
+				8CBCDE1C24982B0F0028EC03 /* RMQPKCS12CertificateConverter.h in Headers */,
+				8CBCDE2424982B0F0028EC03 /* RMQConnectionRecover.h in Headers */,
+				8CBCDE1B24982B0F0028EC03 /* RMQConfirmations.h in Headers */,
+				8CBCDE3D24982B0F0028EC03 /* RMQTransportDelegate.h in Headers */,
+				8CBCDE4D24982B0F0028EC03 /* RMQConnection.h in Headers */,
+				8CBCDE3524982B0F0028EC03 /* RMQProcessInfoNameGenerator.h in Headers */,
+				8CBCDE7924982B0F0028EC03 /* RMQHandshaker.h in Headers */,
+				8CBCDE4C24982B0F0028EC03 /* RMQURI.h in Headers */,
+				8CBCDE3724982B0F0028EC03 /* RMQBasicProperties.h in Headers */,
+				8CBCDE7324982B0F0028EC03 /* RMQSemaphoreWaiterFactory.h in Headers */,
+				8CBCDE3B24982B0F0028EC03 /* RMQConnectionConfig.h in Headers */,
+				8CBCDE2924982B0F0028EC03 /* RMQWaiterFactory.h in Headers */,
+				8CBCDE6D24982B0F0028EC03 /* RMQFramesetValidator.h in Headers */,
+				8CBCDE6C24982B0F0028EC03 /* RMQConsumer.h in Headers */,
+				8CBCDE6424982B0F0028EC03 /* RMQMultipleChannelAllocator.h in Headers */,
+				8CBCDE8024982B0F0028EC03 /* RMQFrameset.h in Headers */,
+				8CBCDE4024982B0F0028EC03 /* RMQConnectionDefaults.h in Headers */,
+				8CBCDE4824982B0F0028EC03 /* RMQFrame.h in Headers */,
+				8CBCDE2524982B0F0028EC03 /* RMQSender.h in Headers */,
+				8CBCDE3824982B0F0028EC03 /* RMQMethodDecoder.h in Headers */,
+				8CBCDE5F24982B0F0028EC03 /* RMQConfirmationTransaction.h in Headers */,
+				8CBCDE2F24982B0F0028EC03 /* RMQTransactionalConfirmations.h in Headers */,
+				8CBCDE2024982B0F0028EC03 /* RMQHeartbeatSender.h in Headers */,
+				8CBCDE2124982B0F0028EC03 /* RMQTCPSocketTransport.h in Headers */,
+				8CBCDE5924982B0F0028EC03 /* RMQConsumerHandlers.h in Headers */,
+				8CBCDE5024982B0F0028EC03 /* RMQUnallocatedChannel.h in Headers */,
+				8CBCDE8124982B0F0028EC03 /* RMQTickingClock.h in Headers */,
+				8CBCDE4524982B0F0028EC03 /* RMQMethodMap.h in Headers */,
+				8CBCDE2E24982B0F0028EC03 /* RMQGCDHeartbeatSender.h in Headers */,
+				8CBCDE1624982B0F0028EC03 /* RMQNameGenerator.h in Headers */,
+				8CBCDE8824982B270028EC03 /* Emit.h in Headers */,
+				8CBCDE7D24982B0F0028EC03 /* RMQReader.h in Headers */,
+				8CBCDE1724982B0F0028EC03 /* RMQSuspendResumeDispatcher.h in Headers */,
+				8CBCDE5C24982B0F0028EC03 /* RMQParser.h in Headers */,
+				8CBCDE4A24982B0F0028EC03 /* RMQTLSOptions.h in Headers */,
+				8CBCDE3424982B0F0028EC03 /* RMQClient.h in Headers */,
+				8CBCDE7524982B0F0028EC03 /* RMQChannel.h in Headers */,
+				8CBCDE3924982B0F0028EC03 /* RMQBasicProperties+MergeDefaults.h in Headers */,
+				8CBCDE5A24982B0F0028EC03 /* RMQMethods.h in Headers */,
+				8CBCDE4924982B0F0028EC03 /* RMQGCDSerialQueue.h in Headers */,
+				8CBCDE7224982B0F0028EC03 /* RMQErrors.h in Headers */,
+				8CBCDE5D24982B0F0028EC03 /* RMQHeartbeat.h in Headers */,
+				8CBCDE6A24982B0F0028EC03 /* RMQTransport.h in Headers */,
+				8CBCDE2B24982B0F0028EC03 /* RMQMessage.h in Headers */,
+				8CBCDE5424982B0F0028EC03 /* RMQProtocolHeader.h in Headers */,
+				8CBCDE4E24982B0F0028EC03 /* RMQValues.h in Headers */,
+				8CBCDE6024982B0F0028EC03 /* RMQAllocatedChannel.h in Headers */,
+				8CBCDE2D24982B0F0028EC03 /* RMQWaiter.h in Headers */,
+				8CBCDE3E24982B0F0028EC03 /* RMQClock.h in Headers */,
+				8CBCDE7A24982B0F0028EC03 /* RMQConnectionDelegate.h in Headers */,
+				8C9A04222477F9C30067AEA4 /* autosolveclient.h in Headers */,
+				8CBCDE5324982B0F0028EC03 /* RMQFramesetValidationResult.h in Headers */,
+				8CBCDE3324982B0F0028EC03 /* RMQTable.h in Headers */,
+				8CBCDE7624982B0F0028EC03 /* RMQConnectionDelegateLogger.h in Headers */,
+				8CBCDE5624982B0F0028EC03 /* RMQExchange.h in Headers */,
+				8CBCDE1F24982B0F0028EC03 /* RMQMethods+Convenience.h in Headers */,
+				8CBCDE6624982B0F0028EC03 /* RMQLocalSerialQueue.h in Headers */,
+				8CBCDE5524982B0F0028EC03 /* RMQSemaphoreWaiter.h in Headers */,
+				8CBCDE3F24982B0F0028EC03 /* RMQStarter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8C9A041C2477F9C30067AEA4 /* AutoSolveClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C9A04252477F9C30067AEA4 /* Build configuration list for PBXNativeTarget "AutoSolveClient" */;
+			buildPhases = (
+				8C9A04182477F9C30067AEA4 /* Headers */,
+				8C9A04192477F9C30067AEA4 /* Sources */,
+				8C9A041A2477F9C30067AEA4 /* Frameworks */,
+				8C9A041B2477F9C30067AEA4 /* Resources */,
+				8C9A044A2477FBE00067AEA4 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AutoSolveClient;
+			productName = autosolveclient;
+			productReference = 8C9A041D2477F9C30067AEA4 /* AutoSolveClient.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8C9A04142477F9C30067AEA4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = AYCD;
+				TargetAttributes = {
+					8C9A041C2477F9C30067AEA4 = {
+						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1150;
+					};
+				};
+			};
+			buildConfigurationList = 8C9A04172477F9C30067AEA4 /* Build configuration list for PBXProject "autosolveclient" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8C9A04132477F9C30067AEA4;
+			productRefGroup = 8C9A041E2477F9C30067AEA4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8C9A041C2477F9C30067AEA4 /* AutoSolveClient */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8C9A041B2477F9C30067AEA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C95295B247AAE9300237BDF /* LICENSE.txt in Resources */,
+				8CADA4D02478504700803AE0 /* Podfile in Resources */,
+				8CBCDCC72498202C0028EC03 /* autosolveclient.podspec in Resources */,
+				8C9A04522477FD5D0067AEA4 /* .gitignore in Resources */,
+				8C9A044C2477FC300067AEA4 /* README.md in Resources */,
+				8C9A04312477FABB0067AEA4 /* Cartfile in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8C9A04192477F9C30067AEA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CBCDE5B24982B0F0028EC03 /* RMQMultipleChannelAllocator.m in Sources */,
+				8CBCDE6724982B0F0028EC03 /* RMQReader.m in Sources */,
+				8CBCDE2A24982B0F0028EC03 /* RMQQueue.m in Sources */,
+				8CBCDE4124982B0F0028EC03 /* RMQTickingClock.m in Sources */,
+				8C952983247ABFE400237BDF /* AutoSolveCancelResponse.swift in Sources */,
+				8CBCDE6824982B0F0028EC03 /* RMQHeartbeat.m in Sources */,
+				8CBCDE6F24982B0F0028EC03 /* RMQSemaphoreWaiterFactory.m in Sources */,
+				8CBCDE5124982B0F0028EC03 /* RMQHandshaker.m in Sources */,
+				8CBCDE5E24982B0F0028EC03 /* RMQSuspendResumeDispatcher.m in Sources */,
+				8CBCDE8924982B270028EC03 /* RWLock.swift in Sources */,
+				8CBCDE4B24982B0F0028EC03 /* RMQTCPSocketTransport.m in Sources */,
+				8CBCDE7124982B0F0028EC03 /* RMQProcessInfoNameGenerator.m in Sources */,
+				8CBCDE6B24982B0F0028EC03 /* RMQTable.m in Sources */,
+				8CBCDE6524982B0F0028EC03 /* RMQConnectionDelegateLogger.m in Sources */,
+				8CBCDE5224982B0F0028EC03 /* RMQAllocatedChannel.m in Sources */,
+				8CBCDE6924982B0F0028EC03 /* RMQMethods.m in Sources */,
+				8C952985247ABFE400237BDF /* AutoSolveCancelRequest.swift in Sources */,
+				8CBCDE6324982B0F0028EC03 /* RMQGCDSerialQueue.m in Sources */,
+				8CBCDE6224982B0F0028EC03 /* RMQUnallocatedChannel.m in Sources */,
+				8C952980247ABFE400237BDF /* AutoSolveRequest.swift in Sources */,
+				8CBCDE4324982B0F0028EC03 /* RMQPKCS12CertificateConverter.m in Sources */,
+				8C9A043C2477FAED0067AEA4 /* AutoSolve.swift in Sources */,
+				8CBCDE4F24982B0F0028EC03 /* RMQBasicProperties.m in Sources */,
+				8CBCDE7024982B0F0028EC03 /* RMQSemaphoreWaiter.m in Sources */,
+				8C7AB3E2247B40CD00FC9073 /* AutoSolveDelegate.swift in Sources */,
+				8CBCDE4424982B0F0028EC03 /* RMQMessage.m in Sources */,
+				8CBCDE4624982B0F0028EC03 /* RMQFramesetValidationResult.m in Sources */,
+				8CBCDE8724982B270028EC03 /* Signal.swift in Sources */,
+				8CBCDE8624982B270028EC03 /* ObservableVariable.swift in Sources */,
+				8CBCDE3124982B0F0028EC03 /* RMQFramesetValidator.m in Sources */,
+				8C952984247ABFE400237BDF /* AutoSolveTokenResponse.swift in Sources */,
+				8C952982247ABFE400237BDF /* AutoSolveTokenRequest.swift in Sources */,
+				8CBCDE1824982B0F0028EC03 /* RMQConnectionRecover.m in Sources */,
+				8C952981247ABFE400237BDF /* AutoSolveResponse.swift in Sources */,
+				E8A8268771B4458FCCEBFEDD /* AutoSolveConnectionEvent.swift in Sources */,
+				8CBCDE2624982B0F0028EC03 /* RMQFrameset.m in Sources */,
+				8CBCDE1A24982B0F0028EC03 /* RMQValues.m in Sources */,
+				8CBCDE4224982B0F0028EC03 /* RMQMethods+Convenience.m in Sources */,
+				8CBCDE3624982B0F0028EC03 /* RMQGCDHeartbeatSender.m in Sources */,
+				8CBCDE6124982B0F0028EC03 /* RMQConnection.m in Sources */,
+				8CBCDE7724982B0F0028EC03 /* RMQTLSOptions.m in Sources */,
+				8CBCDE7E24982B0F0028EC03 /* RMQConnectionConfig.m in Sources */,
+				8CBCDE2224982B0F0028EC03 /* RMQParser.m in Sources */,
+				8CBCDE4724982B0F0028EC03 /* RMQMethodDecoder.m in Sources */,
+				8CBCDE6E24982B0F0028EC03 /* RMQConsumer.m in Sources */,
+				8CBCDE2C24982B0F0028EC03 /* RMQConfirmationTransaction.m in Sources */,
+				8CBCDE2324982B0F0028EC03 /* RMQMethodMap.m in Sources */,
+				E8A82F88AEB2B77DC4AFB91F /* AutoSolveError.swift in Sources */,
+				8CBCDE1E24982B0F0028EC03 /* RMQFrame.m in Sources */,
+				8CBCDE3C24982B0F0028EC03 /* RMQQueuingConnectionDelegateProxy.m in Sources */,
+				8CBCDE1924982B0F0028EC03 /* RMQBasicProperties+MergeDefaults.m in Sources */,
+				8CBCDE3A24982B0F0028EC03 /* RMQTransactionalConfirmations.m in Sources */,
+				E8A825FADAD2B3AF73058B7B /* AutoSolveConstants.swift in Sources */,
+				8CBCDE7824982B0F0028EC03 /* RMQSynchronizedMutableDictionary.m in Sources */,
+				8CBCDE7C24982B0F0028EC03 /* RMQErrors.m in Sources */,
+				E8A826BD6AA8FB53B59B2036 /* Encoding.swift in Sources */,
+				E8A82FFC14294E2E406D354D /* Validation.swift in Sources */,
+				E8A82216C4F82AC5DCCEFF86 /* AutoSolveDeliveryHandler.swift in Sources */,
+				8CBCDE7F24982B0F0028EC03 /* RMQProtocolHeader.m in Sources */,
+				8CBCDE7424982B0F0028EC03 /* RMQExchange.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8C9A04232477F9C30067AEA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8C9A04242477F9C30067AEA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8C9A04262477F9C30067AEA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = autosolveclient/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fuzzy.AutoSolveClient;
+				PRODUCT_NAME = AutoSolveClient;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8C9A04272477F9C30067AEA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = autosolveclient/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fuzzy.AutoSolveClient;
+				PRODUCT_NAME = AutoSolveClient;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8C9A04172477F9C30067AEA4 /* Build configuration list for PBXProject "autosolveclient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C9A04232477F9C30067AEA4 /* Debug */,
+				8C9A04242477F9C30067AEA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C9A04252477F9C30067AEA4 /* Build configuration list for PBXNativeTarget "AutoSolveClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C9A04262477F9C30067AEA4 /* Debug */,
+				8C9A04272477F9C30067AEA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8C9A04142477F9C30067AEA4 /* Project object */;
+}
